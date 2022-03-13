@@ -1,0 +1,56 @@
+* {
+  font-family: 'Lobster', cursive;
+  margin:0;
+  padding:0;
+}
+
+.center{
+  position: absolute;
+  height: 40px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#menuicon + label{
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+  background-color: black;
+  transform: translate(-50%,-50%);
+}
+#menuicon + label span{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  border-radius: 30px;
+  background-color: red;
+  transition: all .35s;
+}
+#menuicon + label span:nth-child(1){
+  top: 0;
+}
+#menuicon + label span:nth-child(2){
+  top: 50%;
+  transform: translateY(-50%);
+}
+#menuicon + label span:nth-child(3){
+  top: 100%;
+  transform: translateY(-100%);
+}
+
+#menuicon:checked +label span:nth-child(1){
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+#menuicon:checked +label span:nth-child(2){
+  opacity: 0;
+}
+#menuicon:checked +label span:nth-child(3){
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
