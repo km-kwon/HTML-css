@@ -36,7 +36,7 @@ a:focus{
   background-color: red;
   color: black;
   width: 100%;
-  transition: all .35s;
+  transition: all .200s;
 }
 .menu > span{
   font-size: 20px;
@@ -58,6 +58,7 @@ a:focus{
 }
 #menuicon{
   display: none;
+  transition: all .35s;
 }
 #menuicon + label{
   position: absolute; 
@@ -87,6 +88,9 @@ a:focus{
 }
 #menuicon + label span:nth-child(3){
   bottom: 0;
+}
+#menuicon:checked{
+  top: calc(20vh + 30px);
 }
 #menuicon:checked + label{
   top: calc(20vh + 30px);
